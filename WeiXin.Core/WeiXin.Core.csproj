@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9187DBE1-3822-4D3D-8152-1EC7B769C80B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeiXin.Core</RootNamespace>
+    <AssemblyName>WeiXin.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\IgnoreInstructionAttribute.cs" />
+    <Compile Include="Button\Button.cs" />
+    <Compile Include="Button\ClickButton.cs" />
+    <Compile Include="Button\ParentButton.cs" />
+    <Compile Include="Button\ViewButton.cs" />
+    <Compile Include="Core\Ibutton.cs" />
+    <Compile Include="Core\IInstructionable.cs" />
+    <Compile Include="Core\IRespondable.cs" />
+    <Compile Include="Core\IWeiXinable.cs" />
+    <Compile Include="Core\Menu.cs" />
+    <Compile Include="Core\Message.cs" />
+    <Compile Include="Core\WeiXinModelBase.cs" />
+    <Compile Include="EnumData.cs" />
+    <Compile Include="Enum\ButtonType.cs" />
+    <Compile Include="Enum\Errcode.cs" />
+    <Compile Include="Enum\EventType.cs" />
+    <Compile Include="Enum\Lang.cs" />
+    <Compile Include="Enum\MessageType.cs" />
+    <Compile Include="Instruction\ComparerInstructionBaseByType.cs" />
+    <Compile Include="Instruction\InstructionBase.cs" />
+    <Compile Include="Message\RequestMessage\EventMessage\ClickEventMessage.cs" />
+    <Compile Include="Message\RequestMessage\EventMessage\EventKeyMessage.cs" />
+    <Compile Include="Message\RequestMessage\EventMessage\EventMessage.cs" />
+    <Compile Include="Message\RequestMessage\EventMessage\LocationEventMessage.cs" />
+    <Compile Include="Message\RequestMessage\EventMessage\QCodeEventMessage.cs" />
+    <Compile Include="Message\RequestMessage\EventMessage\SubscribeEventMessage.cs" />
+    <Compile Include="Message\RequestMessage\EventMessage\ViewEventMessage.cs" />
+    <Compile Include="Message\RequestMessage\NormalMessage\RequestImageMessage.cs" />
+    <Compile Include="Message\RequestMessage\NormalMessage\RequestLinkMessage.cs" />
+    <Compile Include="Message\RequestMessage\NormalMessage\RequestLocationMessage.cs" />
+    <Compile Include="Message\RequestMessage\NormalMessage\RequestMediaMessage.cs" />
+    <Compile Include="Message\RequestMessage\NormalMessage\RequestMusicMessage.cs" />
+    <Compile Include="Message\RequestMessage\NormalMessage\RequestNormalMessage.cs" />
+    <Compile Include="Message\RequestMessage\NormalMessage\RequestTextMessage.cs" />
+    <Compile Include="Message\RequestMessage\NormalMessage\RequestVideoMessage.cs" />
+    <Compile Include="Message\RequestMessage\NormalMessage\RequestVoiceMessage.cs" />
+    <Compile Include="Message\RequestMessage\NormalMessage\RequestVoiceRecognitionMessage.cs" />
+    <Compile Include="Message\RequestMessage\RequestMessage.cs" />
+    <Compile Include="Message\RespondMessage\NormalMessage\RespondImageMessage.cs" />
+    <Compile Include="Message\RespondMessage\NormalMessage\RespondLinkMessage.cs" />
+    <Compile Include="Message\RespondMessage\NormalMessage\RespondLocationMessage.cs" />
+    <Compile Include="Message\RespondMessage\NormalMessage\RespondMediaMessage.cs" />
+    <Compile Include="Message\RespondMessage\NormalMessage\RespondMusicMessage.cs" />
+    <Compile Include="Message\RespondMessage\NormalMessage\RespondNormalMessage.cs" />
+    <Compile Include="Message\RespondMessage\NormalMessage\RespondTextMessage.cs" />
+    <Compile Include="Message\RespondMessage\NormalMessage\RespondVideoMessage.cs" />
+    <Compile Include="Message\RespondMessage\NormalMessage\RespondVoiceMessage.cs" />
+    <Compile Include="Message\RespondMessage\RespondMessage.cs" />
+    <Compile Include="Models\AccessToken.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\NewsMessageItem.cs" />
+    <Compile Include="Models\Request\CustomMessage\CustomMessage.cs" />
+    <Compile Include="Models\Request\CustomMessage\ImageCustomMessage.cs" />
+    <Compile Include="Models\Request\CustomMessage\MusicCustomMessage.cs" />
+    <Compile Include="Models\Request\CustomMessage\NewsCustomMessage.cs" />
+    <Compile Include="Models\Request\CustomMessage\TextCustomMessage.cs" />
+    <Compile Include="Models\Request\CustomMessage\VideoCustomMessage.cs" />
+    <Compile Include="Models\Request\CustomMessage\VoiceCustomMessage.cs" />
+    <Compile Include="Models\Request\KFAccount.cs" />
+    <Compile Include="Models\ResponseState.cs" />
+    <Compile Include="Models\Response\User.cs" />
+    <Compile Include="Models\Response\UserList.cs" />
+    <Compile Include="Models\Upload\ImageUpload.cs" />
+    <Compile Include="Models\Upload\Upload.cs" />
+    <Compile Include="Models\WeiXinAccount.cs" />
+    <Compile Include="Models\WeiXinException.cs" />
+    <Compile Include="Process\TestWeiXinProcess.cs" />
+    <Compile Include="Process\WeiXinProcess.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting.cs" />
+    <Compile Include="WeiXinCommon.cs" />
+    <Compile Include="WeiXinTools.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
