@@ -10,7 +10,7 @@ namespace WeiXin.Core
     ///// 消息的类型
     ///// </summary>
     //public class MessageType
-    //{
+    //{ 
     //    /// <summary>
     //    /// 文本
     //    /// </summary>
