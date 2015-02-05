@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -51,6 +52,29 @@ namespace WeiXin.Core
 
                 yield return t.Assembly;
 
+            }
+        }
+
+
+        /// <summary>
+        /// 得到当前应用程序中所有DLL文件
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<Assembly> GetCurrentAssemblys()
+        {
+            var allFiles = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll");
+            foreach (var item in allFiles)
+            {
+                Assembly assembly = null;
+                try
+                {
+                    assembly = Assembly.LoadFrom(item);
+                }
+                catch
+                {
+                    continue;
+                }
+                yield return assembly;
             }
         }
 

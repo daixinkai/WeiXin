@@ -56,8 +56,8 @@ namespace WeiXin.Core.Instruction
             //        }
             //    }
             //}
-
-            foreach (var ass in AppDomain.CurrentDomain.GetAssemblies())
+            
+            foreach (var ass in WeiXinTools.GetCurrentAssemblys())
             {
                 foreach (var item in WeiXinTools.GetInstanceFromAssembly<InstructionBase>(ass))
                 {
